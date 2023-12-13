@@ -1,0 +1,242 @@
+/*ROOTS---------*/
+:root
+{
+    --pcol: #FFE600;
+    --dark: #333;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+}
+section, nav, footer
+{
+    width: 100vw;
+}
+
+
+/*NAVBAR*/
+nav
+{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: minmax(100%);
+    padding: 10px 0;
+    z-index: 3;
+}
+#logo
+{
+    height: 70px;
+    margin-left: 120px;
+}
+nav ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-link
+{
+    list-style-type: none;
+}
+#nav-link *
+{
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto 20px;
+}
+#nav-link a
+{
+    text-decoration: none;
+    color: white;
+}
+#nav-cta
+{
+    background-color: whitesmoke;
+    color: black;
+    margin-right: 120px;
+}
+
+/*HAVE A FLY TALK*/
+#have-a-fly-talk
+{
+    height: 85vh;
+}
+
+/*CLASSES*/
+.bg
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.overlay
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+.center-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1
+{
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+p
+{
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+button
+{
+    border: none;
+    border-radius: 5px;
+    padding: 13px 30px;
+    margin: auto 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.buttons
+{
+    display: flex;
+    width: fit-content;
+    margin-top: 50px;
+}
+.primary-button
+{
+    background-color: var(--pcol);
+}
+.animated-img
+{
+    animation: img-efx 0.1s linear infinite;
+}
+
+
+
+
+/*HOME PAGE----------------*/
+
+/*HERO*/
+#hero
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero-text
+{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#hh , #ph
+{
+    margin: 5px auto;
+}
+#hero-imgs
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+#hero-imgs img
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#hero-img1
+{
+    animation-delay: 0s;
+}
+
+
+/*CREATIVE TEAM*/
+#creatiive-team
+{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(45deg, #050505, #151515, #050505);
+    justify-content:space-between;
+    align-items: center;
+}
+.Creative
+{
+    position: absolute;
+    margin-bottom: 5%;
+    left: 26%;
+    color: white;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 400;
+    width: 20vw;
+    z-index: 3;
+}
+.me-and-pamylka
+{
+    position: absolute;
+    left: 40vw;
+    bottom: 0%;
+    width: 27vw;
+    z-index: 2;
+}
+.team
+{
+    position: absolute;
+    margin-top: 5%;
+    right: 22%;
+    color: white;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 800;
+    width: 20vw;
+    z-index: 1;
+}
+
+/*SEE OUR WORK*/
+#see-our-work
+{
+    position: relative;
+    height: 90vh;
+}
