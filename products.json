@@ -1,15 +1,8 @@
 {
-    "Niche_1" : {
-        "Nike" : {
-            "Affiliate link" : "https://affiliate.nike.com/32890470",
-            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
-        },
-        "Addidas" : {
+    "Sports" :
+    {
+        "Adidas" : {
             "Affiliate link" : "https://affiliate.addidas.com/32890470",
-            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
-        },
-        "Puma" : {
-            "Affiliate link" : "https://affiliate.puma.com/32890470",
             "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
         }
     }
