@@ -1,0 +1,185 @@
+/*ROOTS---------*/
+:root
+{
+    --pcol: #FFE600;
+    --dark: #333;
+    --bright: #eee
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0 none none;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+}
+section, nav, footer
+{
+    width: 100vw;
+}
+h1
+{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--bright);
+    position: relative;
+    margin: auto auto 5vh auto;
+}
+h2
+{
+    font-size: x-large;
+    font-weight: 600;
+}
+p
+{
+    font-size: 18px;
+    color: var(--bright);
+    font-weight: 300;
+}
+button
+{
+    border: none;
+    border-radius: 5px;
+    padding: 13px 30px;
+    margin: auto 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+form
+{
+    margin: 50vh auto;
+}
+
+
+/*NAVBAR*/
+nav
+{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 0;
+    z-index: 3;
+}
+#logo
+{
+    height: 70px;
+    margin-left: 120px;
+}
+nav ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-link
+{
+    list-style-type: none;
+    color: var(--dark)
+}
+#nav-link *
+{
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto 20px;
+    color: var(--bright);
+}
+#nav-link a
+{
+    text-decoration: none;
+}
+#nav-cta
+{
+    background-color: var(--pcol);
+    color: black;
+    margin-right: 120px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 3px;
+}
+
+/*LOGO SEECTION*/
+#logo-section
+{
+    display: flex;
+    position: absolute;
+    height: 60vh;
+    width: 100vw;
+}
+#footer-logo
+{
+    height: 200px;
+    margin: auto auto 4vh auto;
+}
+
+/*CLASSES*/
+.bg
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.buttons
+{
+    display: flex;
+    width: fit-content;
+    margin-top: 50px;
+}
+/* .not-born-content
+{
+    margin: auto;
+} */
+
+/*IDS*/
+#form
+{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    padding: auto auto auto auto;
+}
+#search-bar
+{
+    height: 6vh;
+    width: 50vw;
+    border-radius: 30px;
+    border: none;
+    padding: 0.4vh 1vw;
+    margin-top: 4vh;
+    font-size: medium;
+}
+#search-bar:focus
+{
+    border: none;
+}
+#not-born
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0%;
+    right: 0%;
+    padding: auto;
+    height: 100vh;
+    width: 100vw;
+    color: var(--bright);
+    justify-content: center;
+    align-items: center;
+}
+#not-born div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
