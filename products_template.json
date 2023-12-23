@@ -2,15 +2,15 @@
     "Niche_1" : {
         "Nike" : {
             "Affiliate link" : "https://affiliate.nike.com/32890470",
-            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
+            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered", "F : Didn't get accepted"]
         },
         "Addidas" : {
             "Affiliate link" : "https://affiliate.addidas.com/32890470",
-            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
+            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered", "F : Didn't get accepted"]
         },
         "Puma" : {
             "Affiliate link" : "https://affiliate.puma.com/32890470",
-            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered"]
+            "Status" : ["R : Registered", "W : Stuck on webpage", "N : Not registered", "F : Didn't get accepted"]
         }
     }
 }
