@@ -1,6 +1,7 @@
 :root {
     --pcol: #FFE600;
     --dark: #181818;
+    --bright : #eee
 }
 
 * {
@@ -31,6 +32,7 @@ li {
     margin: 10px auto;
 }
 
+/*Common classes */
 .heading {
     display: flex;
     height: 30vh;
@@ -91,6 +93,28 @@ li {
     margin: auto 20px auto 20px
 }
 
+/* ID */
+#not-born
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0%;
+    right: 0%;
+    padding: auto;
+    height: 100vh;
+    width: 100vw;
+    color: var(--bright);
+    justify-content: center;
+    align-items: center;
+}
+#not-born div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #nav_logo {
     height: 70px;
 }
