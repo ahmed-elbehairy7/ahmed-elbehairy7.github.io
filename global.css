@@ -92,13 +92,18 @@ li {
 .nav_link {
     margin: auto 20px auto 20px
 }
+.nav_logo {
+    height: 70px;
+}
+
+.footer_logo {
+    height: 50vh;
+}
 
 /* ID */
-#not-born
+.not-born
 {
     position: absolute;
-    display: flex;
-    flex-direction: column;
     top: 0%;
     right: 0%;
     padding: auto;
@@ -106,21 +111,6 @@ li {
     width: 100vw;
     color: var(--bright);
     justify-content: center;
-    align-items: center;
-}
-#not-born div
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#nav_logo {
-    height: 70px;
-}
-
-#footer_logo {
-    height: 50vh;
 }
 
 #footer_links_block {
