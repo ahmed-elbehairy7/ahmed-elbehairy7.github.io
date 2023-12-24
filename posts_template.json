@@ -14,6 +14,20 @@
                 "prmopt" : "For a site that is comparing between the products ${products} generate a good conclusion optimized for seo, and avoid including all the products names in it",
                 "extracted_data" : ["site_conclusion"]
             }
+        },
+        "product" : {
+            "features" : {
+                "prompt" : "Give me a list of 5 or 4 features for the ${product} in a python list",
+                "extracted_data" : ["features"]
+            },
+            "UI&UX" : {
+                "prompt" : "Based on users opinions, give me a general sense about the user interface and user experience with ${product}",
+                "extracted_data" : ["UI&UX"]
+            },
+            "summary" : {
+                "prompt" : "Imagine you are an affiliate marketeer, your have to convince people to buy the products you're marketing, your job now is generating a summary for ${product}, this summary should include pros & cons of the product, and a conclusion. You should list the pros and cons as python list",
+                "extracted_data" : "summary"
+            }
         }
     },
 
@@ -25,15 +39,13 @@
         "site_introduction" : "paragraph",
 
         "product_name" : {
-            "product_data" : {
-                "Pricing" : "ignore it since it will be a screenshot from the actual website",
-                "features" : ["list element", "list element", "list element"],
-                "User interface, & user experience" : "paragraph",
-                "Summary" : {
-                    "pros" : ["list element", "list element"],
-                    "cons" : ["list element", "list element"],
-                    "conclusion" : "paragraph"
-                }
+            "Pricing" : "ignore it since it will be a screenshot from the actual website",
+            "features" : ["list element", "list element", "list element"],
+            "UI&UX" : "paragraph",
+            "summary" : {
+                "pros" : ["list element", "list element"],
+                "cons" : ["list element", "list element"],
+                "conclusion" : "paragraph"
             }
         },
         "site_conclusion" : "paragraph"
