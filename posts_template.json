@@ -3,12 +3,16 @@
     "prompts" : {
         "general" : { 
             "site_data" : {
-                "prompt" : "For the sites [shopify, woocommerce, bigcommerce, Adobe commerce (magento), prestashop, salesforce commerce cloud (demandware), wix, godaddy]\nGenerate the following commands and give me every command again with its answer:\n1-Give me a good hook title for the site comparing those products, and don't just include the names of more than two products\n2-give me a good seo description for the site\n3-Give me the best practice keywords to include in this site for seo as a python list",
+                "prompt" : "For the sites ${products}\nGenerate the following commands and give me every command again with its answer:\n1-Give me a good hook title for the site comparing those products, and don't just include the names of more than two products\n2-give me a good seo description for the site\n3-Give me the best practice keywords to include in this site for seo as a python list",
                 "extracted_data" : ["site_title", "site_description", "site_keywords"]
             },
             "site_introduction" : {
-                "prmopt" : "",
+                "prmopt" : "For a site that is comparing between the products ${products} generate a good introduction optimized for seo, and avoid including all the products names in it",
                 "extracted_data" : ["site_introduction"]
+            },
+            "site_conclusion" : {
+                "prmopt" : "For a site that is comparing between the products ${products} generate a good conclusion optimized for seo, and avoid including all the products names in it",
+                "extracted_data" : ["site_conclusion"]
             }
         }
     },
@@ -32,7 +36,7 @@
                 }
             }
         },
-        "Conclusion" : "paragraph"
+        "site_conclusion" : "paragraph"
     }
    }
 }
