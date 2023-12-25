@@ -12,16 +12,14 @@ def main():
   with open("posts_template.json") as file:
       prompts = dict(load(file)['prompts'])
 
-
-
-
   genai.configure(api_key='AIzaSyBW8_tDl2flqdvqcxbhLDHfGNroGLetnQQ')
+
 
   model = genai.GenerativeModel("gemini-pro")
 
-  response = model.generate_content("What is the meaning of life?")
+  response = model.generate_content("What is your applications?")
 
-  print(to_markdown(response.text))
+  print(response.candidates)
 
 
 def to_markdown(text):
