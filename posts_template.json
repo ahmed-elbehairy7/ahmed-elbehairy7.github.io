@@ -1,76 +1,42 @@
 {
-    "prompts": {
-        "general": {
-            "site_data": {
-                "prompt": "For the sites ${products}\nGenerate the following commands and give me every command again with its answer:\n1-Give me a good hook title for the site comparing those products, and don't just include the names of more than two products\n2-give me a good seo description for the site\n3-Give me the best practice keywords to include in this site for seo as a python list",
-                "extracted_data": [
-                    "site_title",
-                    "site_description",
-                    "site_keywords"
-                ]
-            },
-            "site_introduction": {
-                "prompt": "For a site that is comparing between the products ${products} generate a good introduction optimized for seo, and avoid including all the products names in it",
-                "extracted_data": [
-                    "site_introduction"
-                ]
-            },
-            "site_conclusion": {
-                "prompt": "For a site that is comparing between the products ${products} generate a good conclusion optimized for seo, and avoid including all the products names in it",
-                "extracted_data": [
-                    "site_conclusion"
-                ]
-            }
-        },
-        "product": {
-            "features": {
-                "prompt": "Give me a list of 5 or 4 features for the ${product} in a python list",
-                "extracted_data": [
-                    "features"
-                ]
-            },
-            "UI&UX": {
-                "prompt": "Based on users opinions, give me a general sense about the user interface and user experience with ${product}",
-                "extracted_data": [
-                    "UI&UX"
-                ]
-            },
-            "summary": {
-                "prompt": "Imagine you are an affiliate marketeer, your have to convince people to buy the products you're marketing, your job now is generating a summary for ${product}, this summary should include pros & cons of the product, and a conclusion. You should list the pros and cons as python list",
-                "extracted_data": "summary"
-            }
-        }
-    },
-    "no.": {
-        "site_title": "good explaining title for the page",
-        "site_description": "paragraph",
-        "site_keywords": [
-            "list element",
-            "list element"
-        ],
-        "site_content": {
-            "site_introduction": "paragraph",
-            "product_name": {
-                "Pricing": "ignore it since it will be a screenshot from the actual website",
-                "features": [
-                    "list element",
-                    "list element",
-                    "list element"
-                ],
-                "UI&UX": "paragraph",
-                "summary": {
-                    "pros": [
+    "niche": {
+        "product & product": {
+            "site_title": "good explaining title for the page",
+            "site_description": "paragraph",
+            "site_keywords": [
+                "list element",
+                "list element"
+            ],
+            "site_content": {
+                "site_introduction": "paragraph",
+                "product_name": {
+                    "overview": "paragraph",
+                    "Pricing": "ignore it since it will be a screenshot from the actual website",
+                    "features": [
+                        "list element",
                         "list element",
                         "list element"
                     ],
-                    "cons": [
+                    "UI&UX": "paragraph",
+                    "details": "paragraphs",
+                    "tips & tricks": [
                         "list element",
                         "list element"
                     ],
-                    "conclusion": "paragraph"
-                }
-            },
-            "site_conclusion": "paragraph"
+                    "summary": {
+                        "pros": [
+                            "list element",
+                            "list element"
+                        ],
+                        "cons": [
+                            "list element",
+                            "list element"
+                        ],
+                        "conclusion": "paragraph"
+                    }
+                },
+                "site_conclusion": "paragraph"
+            }
         }
     }
 }

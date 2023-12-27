@@ -3,13 +3,13 @@ from json import dumps, load, loads
 import textwrap
 import google.generativeai as genai
 from IPython.display import Markdown
+from pam import check_results
+from itertools import product
 
 
 genai.configure(api_key='AIzaSyBW8_tDl2flqdvqcxbhLDHfGNroGLetnQQ')
 
 model = genai.GenerativeModel("gemini-pro")
-
-chat = None
 
 def main():
   global chat
@@ -21,34 +21,48 @@ def main():
   for niche in niches:
     chat = model.start_chat(history=[])
     products = [x for x in niches[niche]['products']]
-    generate(prompts['general'], ['${products}'], [str(products)])
+    generate(prompts['general'],chat, ['${products}'], [str(products)])
 
-
-def check_results(function):
-
-  def wrapper(*args, **kwargs):
-    while True:
-      returned = function(*args, **kwargs)
-      print(dumps(list(returned), indent=4))
-      match input("Are you happy with the results? y\\n\n").lower():
-        case 'y':
-          return returned
-        case _:
-          continue
-  
-  return wrapper
 
 def to_markdown(text):
   text = text.replace('•', '  *')
-  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
+  return Markdown(textwrap.indent(text, '', predicate=lambda _: True))
 
 def expand_niches(niches : dict):
-  return niches
+  new_niches = {}
+  for niche in niches:
+    products_data = niches[niche]['products']
+    
+    products = all_combinations(products_data)
 
+    for combination in products:
+      new_products = {}
+      for product in combination:
+        new_products[product] = products_data[product]
+
+      new_niches.update({ f"{' & '.join(combination)}" : {
+       "phase" : "register",
+        "products" : new_products}
+      })
+  return new_niches
+
+def all_combinations(values):
+  combinations = []
+  for i in range(1, len(values) + 1):
+    combinations += list(product(values, repeat = i))
+  
+  clean = []
+  for i in range(len(combinations)):
+    combinations[i] = sorted(set(combinations[i]))
+    if not combinations[i] in clean and len(combinations[i]) > 1:
+      clean.append(combinations[i])
+
+  
+  return clean
 
 def get_data():
-  with open("posts_template.json") as file:
-    prompts = dict(load(file)['prompts'])
+  with open("prompts.json") as file:
+    prompts = dict(load(file))
   
   with open("products.json") as file:
     niches = dict(load(file))
@@ -62,7 +76,7 @@ def get_data():
   return prompts, niches
 
 @check_results
-def generate(prompts : dict, unwanted : list = [], replacements : list = []):
+def generate(prompts : dict,chat, unwanted : list = [], replacements : list = []):
   
   for key in prompts:
     prompt = prompts[key]['prompt']
@@ -72,12 +86,12 @@ def generate(prompts : dict, unwanted : list = [], replacements : list = []):
       prompt = prompt.replace(unwanted[i], replacements[i])
 
     with open("file.json", 'a') as file:
-      yield (str(exec_prompt(prompt, extracted_data)))
+      yield (str(exec_prompt(chat, prompt, extracted_data)))
 
 
-def exec_prompt(prompt, extracted_data):
+def exec_prompt(chat, prompt, extracted_data):
   response = chat.send_message(f"Respond to the following prompt as valid json format that can be loaded with json.load without the word json with the keys: {extracted_data}\n\nThe prompt: {prompt}")
-  return to_markdown(response.text).data.replace('>', '')
+  return loads(to_markdown(response.text).data)
 
 
 if __name__ == "__main__":
