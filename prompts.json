@@ -1,0 +1,62 @@
+{
+    "general": {
+        "site_data": {
+            "prompt": "For the sites ${products}\nGenerate the following commands and give me every command again with its answer:\n1-Give me a good hook title for the site comparing those products, and include the names of the products if they're two or less\n2-give me a good seo description for the site\n3-Give me the best practice keywords to include in this site for seo as a python list",
+            "extracted_data": [
+                "site_title",
+                "site_description",
+                "site_keywords"
+            ]
+        },
+        "site_introduction": {
+            "prompt": "For a site that is comparing between the products ${products} generate a good introduction optimized for seo, and avoid including all the products names in it",
+            "extracted_data": [
+                "site_introduction"
+            ]
+        },
+        "site_conclusion": {
+            "prompt": "For a site that is comparing between the products ${products} generate a good conclusion optimized for seo, and avoid including all the products names in it",
+            "extracted_data": [
+                "site_conclusion"
+            ]
+        }
+    },
+    "product": {
+        "overview": {
+            "prompt": "Imagine you're an affiliate blog that compare between products, I want you to generate an overview paragraph that explain ${product}, and include a call to action at the end",
+            "extracted_data": [
+                "overview"
+            ]
+        },
+        "features": {
+            "prompt": "Give me a list of 5 or 4 unique features for the ${product} in a python list",
+            "extracted_data": [
+                "features"
+            ]
+        },
+        "UI&UX": {
+            "prompt": "Based on users opinions, give me a general sense about the user interface and user experience with ${product}",
+            "extracted_data": [
+                "UI&UX"
+            ]
+        },
+        "details": {
+            "prompt": "Imagine you're an affiliate blog that compare between products, I want you to generate a very detailed content about ${product}, explain what it does, write about who's ${product} is suitable for, encourage people to buy it",
+            "extracted_data": [
+                "details"
+            ]
+        },
+        "tips & tricks": {
+            "prompt": "Imagine you're an affiliate blog that compare between products, I want you to give some tips and trick for people who are aiming to purchase ${product} in a python list",
+            "extracted_data": [
+                "tips & tricks"
+            ]
+        },
+        "summary": {
+            "prompt": "Imagine you are an affiliate marketeer, your have to convince people to buy the products you're marketing, your job now is generating a summary for ${product}, this summary should include pros & cons of the product, and a conclusion. You should list the pros and cons as python list, the conclusion should contain a Call to action phrase",
+            "extracted_data": [
+                "summary"
+            ]
+        }
+    }
+}
