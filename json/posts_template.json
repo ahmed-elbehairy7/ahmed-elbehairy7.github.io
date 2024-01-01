@@ -1,41 +1,39 @@
 {
-    "niche": {
-        "product & product": {
-            "site_title": "good explaining title for the page",
-            "site_description": "paragraph",
-            "site_keywords": [
-                "list element",
-                "list element"
-            ],
-            "site_content": {
-                "site_introduction": "paragraph",
-                "product_name": {
-                    "overview": "paragraph",
-                    "Pricing": "ignore it since it will be a screenshot from the actual website",
-                    "features": [
-                        "list element",
+    "product & product": {
+        "site_title": "good explaining title for the page",
+        "site_description": "paragraph",
+        "site_keywords": [
+            "list element",
+            "list element"
+        ],
+        "site_introduction": "paragraph",
+        "site_conclusion": "paragraph",
+        "site_content": {
+            "product_name": {
+                "overview": "paragraph",
+                "Pricing": "ignore it since it will be a screenshot from the actual website",
+                "features": [
+                    "list element",
+                    "list element",
+                    "list element"
+                ],
+                "UI&UX": "paragraph",
+                "details": "paragraphs",
+                "tips & tricks": [
+                    "list element",
+                    "list element"
+                ],
+                "summary": {
+                    "pros": [
                         "list element",
                         "list element"
                     ],
-                    "UI&UX": "paragraph",
-                    "details": "paragraphs",
-                    "tips & tricks": [
+                    "cons": [
                         "list element",
                         "list element"
                     ],
-                    "summary": {
-                        "pros": [
-                            "list element",
-                            "list element"
-                        ],
-                        "cons": [
-                            "list element",
-                            "list element"
-                        ],
-                        "conclusion": "paragraph"
-                    }
-                },
-                "site_conclusion": "paragraph"
+                    "conclusion": "paragraph"
+                }
             }
         }
     }

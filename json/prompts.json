@@ -23,7 +23,7 @@
     },
     "product": {
         "overview": {
-            "prompt": "Imagine you're an affiliate blog that compare between products, I want you to generate an overview paragraph that explain ${product}, and include a call to action at the end",
+            "prompt": "Imagine you're an affiliate blog that compare between products, I want you to generate an overview paragraph that explain ${product}, and include a call to action at the end in the same paragraph",
             "extracted_data": [
                 "overview"
             ]
