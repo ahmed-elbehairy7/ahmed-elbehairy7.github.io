@@ -22,7 +22,9 @@ def put_data(data, file, niche, key):
     with open(file) as file_obj:
         file_data = dict(load(file_obj))
     
-    dump(file_data, fp=open(f"{file.split(".")[0]}_backup.{file.split(".")[1]}", "w"), indent=4)
+    dump(file_data, 
+         fp=open(f"{file.split(".")[0]}_backup.{file.split(".")[1]}", "w"), 
+         indent=4)
 
     file_data[niche] = file_data.get(niche, {})
     file_data[niche][key] = {**file_data[niche].get(key, {}), **data}

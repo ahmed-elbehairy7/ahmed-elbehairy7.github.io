@@ -10,13 +10,13 @@ blog = HeroApp(
     execute=False,
 )
 posts = InApp("posts", "00.00.01", "24/12/2023", "Automation", blog)
+
 niches = InApp(
     "niches",
     "00.01.00",
     "1/1/2024",
     "Including the funcs responsible of expanding niches",
     blog,
-    execute=False,
 )
 inout = InApp(
     "inout",

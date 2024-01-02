@@ -1,11 +1,11 @@
 from os import chdir, path as os_path
-from json import dumps, load, loads
+from json import load
 import google.generativeai as genai
-from pam import check_results, find, err, save_prog
+from pam import find
 from setup import posts
-from niches import expand_niches
 from inout import get_data, put_data
 from ai import generate
+from niches import join_niches
 
 __version__ = "00.00.01"
 
@@ -28,19 +28,28 @@ def main():
         products = [x for x in niches[niche]["products"]]
         put_data(
             generate(prompts["general"], chat, ["${products}"], [str(products)]),
-            "data.json",
+            find("posts.json"),
             niche,
-            "general"
+            "general",
         )
-        
+
         for product in products:
             put_data(
-                {product : generate(prompts["product"], chat, ["${product}"], [product])},
-                "data.json",
+                {
+                    product: generate(
+                        prompts["product"], chat, ["${product}"], [product]
+                    )
+                },
+                find("posts.json"),
                 niche,
-                "site_content"
+                "site_content",
             )
 
+        existing_niches = dict(load(open(find("niches.json"))))
+
+        niches[niche]["phase"] = "content"
+
+        join_niches(niches, existing_niches)
 
 if __name__ == "__main__":
     main()
