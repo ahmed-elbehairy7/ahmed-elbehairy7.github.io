@@ -1,21 +1,20 @@
-from pam import find
+from pam import find, get_file
 from json import load, dump, dumps
 from setup import inout
 from os import path as os_path
 
 
 def get_data():
-    with open(find("prompts.json")) as file:
-        prompts = dict(load(file))
+    prompts = get_file(find("prompts.json"), content_func = lambda x : dict(load(x)))
 
-    with open(find("products.json")) as file:
-        niches = dict(load(file))
-        for key in niches:
-            try:
-                if niches[key]["phase"] != "register":
-                    del niches[key]
-            except KeyError:
-                niches[key].update({"phase": "register"})
+    niches = get_file(find("niches.json"), content_func = lambda x : dict(load(x)))
+
+    for key in niches:
+        try:
+            if niches[key]["phase"] != "register":
+                del niches[key]
+        except KeyError:
+            niches[key].update({"phase": "register"})
 
     return prompts, niches
 

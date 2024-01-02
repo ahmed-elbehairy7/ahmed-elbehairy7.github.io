@@ -1,6 +1,22 @@
 from itertools import product
 from setup import niches
+from pam import find
+from json import load, dump
 
+
+def main():
+    initial_niches = dict(load(open(find("products.json"))))
+
+    expanded_niches = dict(load(open(find("niches.json"))))
+
+    initial_niches = expand_niches(initial_niches)
+
+    for key in expanded_niches:
+        expanded_niches[key]["products"] = initial_niches[key]["products"]
+
+    dump(dict(list(initial_niches.items()) + list(expanded_niches.items())), open(find("niches.json"), "w"), indent=4)
+
+    
 
 def expand_niches(niches: dict):
     """Function to expand niches and posts for every niche"""
@@ -25,7 +41,6 @@ def expand_niches(niches: dict):
             )
     return new_niches
 
-
 def all_combinations(values):
     combinations = []
     for i in range(1, len(values) + 1):
@@ -42,3 +57,5 @@ def all_combinations(values):
 
 if __name__ == "__main__":
     print(niches)
+
+    main()

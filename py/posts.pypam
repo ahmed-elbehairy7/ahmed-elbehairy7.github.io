@@ -23,8 +23,6 @@ def main():
 
     prompts, niches = get_data()
 
-    niches = expand_niches(niches)
-
     for niche in niches:
         chat = model.start_chat(history=[])
         products = [x for x in niches[niche]["products"]]

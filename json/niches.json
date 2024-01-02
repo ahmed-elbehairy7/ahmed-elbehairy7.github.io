@@ -1,0 +1,76 @@
+{
+    "Adidas & Nike": {
+        "phase": "register",
+        "products": {
+            "Adidas": {
+                "Affiliate link": "https://affiliate.addidas.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            },
+            "Nike": {
+                "Affiliate link": "https://affiliate.nike.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            }
+        }
+    },
+    "Adidas & Puma": {
+        "phase": "register",
+        "products": {
+            "Adidas": {
+                "Affiliate link": "https://affiliate.addidas.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            },
+            "Puma": {
+                "Affiliate link": "https://affiliate.puma.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            }
+        }
+    },
+    "Nike & Puma": {
+        "phase": "register",
+        "products": {
+            "Nike": {
+                "Affiliate link": "https://affiliate.nike.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            },
+            "Puma": {
+                "Affiliate link": "https://affiliate.puma.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            }
+        }
+    },
+    "Adidas & Nike & Puma": {
+        "phase": "register",
+        "products": {
+            "Adidas": {
+                "Affiliate link": "https://affiliate.addidas.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            },
+            "Nike": {
+                "Affiliate link": "https://affiliate.nike.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            },
+            "Puma": {
+                "Affiliate link": "https://affiliate.puma.com/32890470",
+                "Status": [
+                    "N : Not registered"
+                ]
+            }
+        }
+    }
+}
